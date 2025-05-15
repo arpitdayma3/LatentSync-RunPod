@@ -50,3 +50,6 @@ def handler(event):
                 return { "error": "Upload failed", "details": response.text }
     except Exception as e:
         return { "error": f"Upload failed: {str(e)}" }
+
+if __name__ == "__main__":
+    runpod.serverless.run(handler)
